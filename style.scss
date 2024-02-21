@@ -1,0 +1,73 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+// Variabler
+$primary-color: #333;
+$accent-color: #555;
+$overlay-bg: rgba(255, 255, 255, 0.8);
+
+// Navigationsfält
+.navbar {
+  background-color: $primary-color;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu {
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 20px;
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Container med bild och overlay
+.container {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+      color: $primary-color;
+    }
+
+    p {
+      color: $primary-color;
+    }
+
+    background-color: $overlay-bg;
+    padding: 20px;
+    border-radius: 8px;
+  }
+}
